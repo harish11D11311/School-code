@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My School Code</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My School Programs</title>
+
+    <!-- Helps prevent the browser from showing an old cached page -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: #f2f2f2;
+            margin: 20px;
+            background: #f5f5f5;
         }
 
         h1 {
@@ -21,6 +27,7 @@
             padding: 15px;
             margin: 20px 0;
             border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         pre {
@@ -36,69 +43,67 @@
             padding: 10px 15px;
             border: none;
             border-radius: 6px;
-            background: #222;
-            color: white;
             cursor: pointer;
-        }
-
-        button:active {
-            transform: scale(0.97);
+            font-size: 15px;
         }
     </style>
 </head>
 
 <body>
 
-<h1>📚 My School Code</h1>
-
-<!-- ========================= -->
-<!-- ADD YOUR PROGRAMS BELOW   -->
-<!-- ========================= -->
+    <h1>My School Programs</h1>
 
 
-<div class="program">
-    <h2>Program 1</h2>
+    <!-- PROGRAM 1 -->
+    <div class="program">
+        <h2>Program 1</h2>
 
-    <pre id="program1">years=float(input("no. of years?"))
-    days = (years" 365) 
-    hours (days 24) 
-    minutes=(hours*60) 
-    seconds=(minutes 60)
-    print (years," years is",days,"days\n",hours,"hours\n",minutes," minutes\n",seconds,"seconds")
-    </pre>
+        <pre id="program1">print("Hello World")</pre>
 
-    <button onclick="copyCode('program1')">📋 Copy Code</button>
-</div>
+        <button onclick="copyCode('program1')">📋 Copy Code</button>
+    </div>
 
 
-<div class="program">
-    <h2>Program 2</h2>
+    <!-- PROGRAM 2 -->
+    <div class="program">
+        <h2>Program 2</h2>
 
-    <pre id="program2">years=float(input("no. of years?"))
-    days = (years" 365) 
-    hours (days 24) 
-    minutes=(hours*60) 
-    seconds=(minutes 60)
-    print (years," years is",days,"days\n",hours,"hours\n",minutes," minutes\n",seconds,"seconds")</pre>
+        <pre id="program2">YOUR PROGRAM HERE</pre>
 
-    <button onclick="copyCode('program2')">📋 Copy Code</button>
-</div>
+        <button onclick="copyCode('program2')">📋 Copy Code</button>
+    </div>
 
 
-<!-- ========================= -->
-<!-- ADD MORE PROGRAMS HERE    -->
-<!-- ========================= -->
+    <!-- PROGRAM 3 -->
+    <div class="program">
+        <h2>Program 3</h2>
+
+        <pre id="program3">YOUR PROGRAM HERE</pre>
+
+        <button onclick="copyCode('program3')">📋 Copy Code</button>
+    </div>
 
 
-<script>
-function copyCode(id) {
-    const code = document.getElementById(id).innerText;
+    <!-- PROGRAM 4 -->
+    <div class="program">
+        <h2>Program 4</h2>
 
-    navigator.clipboard.writeText(code).then(function() {
-        alert("✅ Code copied!");
-    });
-}
-</script>
+        <pre id="program4">YOUR PROGRAM HERE</pre>
+
+        <button onclick="copyCode('program4')">📋 Copy Code</button>
+    </div>
+
+
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+
+            navigator.clipboard.writeText(code);
+
+            alert("Code copied!");
+        }
+    </script>
 
 </body>
+</html>
 </html>
