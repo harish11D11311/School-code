@@ -7,8 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            background: #f2f2f2;
         }
 
         h1 {
@@ -26,17 +27,22 @@
             background: #222;
             color: white;
             padding: 15px;
-            overflow-x: auto;
             border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
         }
 
         button {
             padding: 10px 15px;
             border: none;
             border-radius: 6px;
-            cursor: pointer;
             background: #222;
             color: white;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.97);
         }
     </style>
 </head>
@@ -45,36 +51,35 @@
 
 <h1>📚 My School Code</h1>
 
+<!-- ========================= -->
+<!-- ADD YOUR PROGRAMS BELOW   -->
+<!-- ========================= -->
+
+
 <div class="program">
-    <h2>Day 1 - Hello World</h2>
+    <h2>Program 1</h2>
 
-    <pre id="code1">print("Hello World")</pre>
+    <pre id="program1">PUT YOUR CODE HERE</pre>
 
-    <button onclick="copyCode('code1')">📋 Copy Code</button>
+    <button onclick="copyCode('program1')">📋 Copy Code</button>
 </div>
 
 
 <div class="program">
-    <h2>Day 2 - Calculator</h2>
+    <h2>Program 2</h2>
 
-    <pre id="code2">a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+    <pre id="program2">PUT YOUR CODE HERE</pre>
 
-print("Sum =", a + b)
-print("Difference =", a - b)
-print("Product =", a * b)</pre>
-
-    <button onclick="copyCode('code2')">📋 Copy Code</button>
+    <button onclick="copyCode('program2')">📋 Copy Code</button>
 </div>
-
-
+print("hello world")
 <script>
 function copyCode(id) {
     const code = document.getElementById(id).innerText;
 
-    navigator.clipboard.writeText(code);
-
-    alert("Code copied!");
+    navigator.clipboard.writeText(code).then(function() {
+        alert("✅ Code copied!");
+    });
 }
 </script>
 
